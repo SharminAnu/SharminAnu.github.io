@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+
+body{
+      background-image: url("3.jpg");
+      background-color: #cccccc;
+    }
+
+.header-image {
+background-image: url(“2.jpg”);
+background-position: center;
+background-repeat: no-repeat;
+position: relative;
+background-size: cover;
+}
+
+.header-text {
+text-align: center
+position: relative;
+top: 60%;
+left: 50%;
+transform: translate(-50%, -50%);
+color:black;
+}
+
+</style>
+</head>
+
 <body>
 
-<h2 style="background-image: url('1.jpg');">Background Image</h2>
+<div class= “header-image”>
+<div class= “header-text”>
+<h1> CSS header image </h1>
+</div>
+</div>
 
-<p>A background image for a p element:</p>
+<h2 style="background-image: url('2.jpg');">Background Image</h2>
 
-<p style="background-image: url('1.jpg');">
-You can specify background images<br>
-for any visible HTML element.<br>
-In this example, the background image<br>
-is specified for a p element.<br>
-By default, the background-image<br>
-will repeat itself in the direction(s)<br>
-where it is smaller than the element<br>
-where it is specified. (Try resizing the<br>
-browser window to see how the<br>
-background image behaves.
-</p>
+
 
 </body>
 </html>
