@@ -46,13 +46,13 @@ body{
     text-align: center;
 }
 
-footer{
-    position: absolute;
+.footer{
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
     background: #111;
-    height: 10rem;
+    height: 8rem;
     width: 100vw;
     padding-top: 0px;
     padding-bottom: 2.5rem;
@@ -74,6 +74,12 @@ footer{
     color: #cacdd2;
 }
 
+.map {
+  width: 300px;
+  height: 200px;  
+  padding: 50px;
+  border: 3px solid black;
+}
 
 </style>
 
@@ -91,35 +97,46 @@ footer{
     <center><a href="https://ibb.co/2vQt5g4"><img src="https://i.ibb.co/HtszXn8/1.jpg" alt="1" border="0"></a><br /></center>
 
     <p>The quality of drinking water is very crucial for a community to thrive. Lots of US households still suffer from contaminated drinking water like lead, arsenic etc. It is hard to keep track of the water contamination level in a city with complex water pipe structures and reservoirs. Our community based project will help to tackle this important problem.</p>
+  <center>
+    <h3>Geo Location</h3>
+    <input type="text" id="Zip Code" name="Zip Code" placeholder="Enter your zip code"><br>
+    <button type="button" onclick="location.SharminAnu/SharminAnu.github.io/map.html">Click Me!</button>
+    <div class="map">The Map Will Be Here.........</div>
+  </center>
 
+  <center>
+    <h3>Statistics</h3>
+    <button type="button" onclick="location.SharminAnu/SharminAnu.github.io/map.html">Show Graph!</button>
+    <div class="map">Visualization of Heavy Metal's Percentage Will Be Here.........</div>
+  </center>
 
-  <!-- <label for="Geo Location">Geo Location:</label> -->
-  <center><h3>Geo Location</h3></center>
-  <input type="text" id="Zip Code" name="Zip Code" placeholder="Enter your zip code">
-  <button type="button" onclick="map.html">Click Me!</button><br>
-  <input type="text" id="Geo Location" name="Geo Location" placeholder="Map Will Be Here"><br>
+  <div class="footer">
+    <div class="footer-content">
+      <h3 class="footer-content h3">Team Members</h3>
+      <ul>
+        <li><a href="mailto:Sharmin_Sultana@student.uml.edu">Sharmin Sultana</a></li>
+        <li><a href="mailto:atqiyamunawara_mahi@student.uml.edu">Atqiya Munawara Mahi</a></li>
+        <li><a href="mailto:mdmahmudur_rahman@student.uml.edu">Md Mahmudur Rahman</a></li>
+     </ul>
+    </div>
+  </div>
 
-  <label for="Visualization of Heavy Metal's Percentage">Visualization of Heavy Metal's Percentage:</label>
-  <input type="text" id="Visualization of Heavy Metal's Percentage" name="Visualization of Heavy Metal's Percentage" placeholder="Visualization Will Be Here">
+  <!-- <footer id="footer">
+    <div class="footer-content">
+      <h3 class="footer-content h3">Team Members</h3>
+      <ul>
+        <li><a href="mailto:Sharmin_Sultana@student.uml.edu">Sharmin Sultana</a></li>
+        <li><a href="mailto:atqiyamunawara_mahi@student.uml.edu">Atqiya Munawara Mahi</a></li>
+        <li><a href="mailto:mdmahmudur_rahman@student.uml.edu">Md Mahmudur Rahman</a></li>
+     </ul>
+    </div>
+  </footer> -->
 
-
-  
   </div>
 </div>
    
-<!-- <footer id="footer">
-  <div class="footer-content">
-    <h3 class="footer-content h3">Team Members</h3>
-    <ul>
-      <li><a href="mailto:Sharmin_Sultana@student.uml.edu">Sharmin Sultana</a></li>
-      <li><a href="mailto:atqiyamunawara_mahi@student.uml.edu">Atqiya Munawara Mahi</a></li>
-      <li><a href="mailto:mdmahmudur_rahman@student.uml.edu">Md Mahmudur Rahman</a></li>
-   </ul>
-  </div>
-</footer> -->
-<!-- <a href="path_to_login_page">
-  <button>Take me to the login page</button>
-</a> -->
+
+
 
 </body>
 </html>
