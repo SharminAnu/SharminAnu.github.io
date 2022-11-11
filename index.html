@@ -81,38 +81,13 @@
       color: #cacdd2;
   }
 
-  .map {
-    width: 300px;
-    height: 200px;  
-    padding: 50px;
-    border: 3px solid black;
-  }
 
   </style>
-<style type="text/css">
-  html, body, #basicMap {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-  }
-</style>
-<script src="OpenLayers.js"></script>
-<script>
-  function init() {
-          map = new OpenLayers.Map("basicMap");
-          var mapnik         = new OpenLayers.Layer.OSM();
-          var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-          var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
-          var position       = new OpenLayers.LonLat(13.41,52.52).transform( fromProjection, toProjection);
-          var zoom           = 15; 
 
-          map.addLayer(mapnik);
-          map.setCenter(position, zoom );
-</script>
 
 </head>
 
-<body onload="init();">
+<body>
 
 <div id="page-container">
   <div id="content-wrap">
@@ -126,7 +101,7 @@
     <input type="text" id="Zip Code" name="Zip Code" placeholder="Enter your zip code"><br>
     <button type="button" onclick="location.SharminAnu/SharminAnu.github.io/map.html">Click Me!</button>
     <div class="map">The Map Will Be Here.........</div>
-    <div id="basicMap"></div>
+    <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="first_basic_map" src="https://arcgis.com/apps/Embed/index.html?webmap=b9082e2407e845a39346af898292d0d0&extent=-71.3671,42.624,-71.2445,42.6625&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"></iframe></div>
   </center>
 
   <center>
