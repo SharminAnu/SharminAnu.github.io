@@ -7,53 +7,81 @@
   "lastSynced": "2026-01-26",
   "publications": [
     {
-      "title": "Wearable-based Fair and Accurate Pain Assessment Using Multi-Attribute Fairness Loss in Convolutional Neural Networks",
-      "authors": "Sharmin Sultana, Yidong Zhu, Shao-Hsien Liu, MAU Alam",
-      "venue": "MobiQuitous 2024",
-      "year": 2025,
-      "status": "Published"
-    },
-    {
-      "title": "Detection of Short-Form Video Addiction with Wearable Sensors via Temporally-Coherent Domain Adaptation",
-      "authors": "Mahmudur Rahman, Atqiya Munawara Mahi, Sharmin Sultana, Matthew M Churpek, Mohammad Arif Ul Alam",
-      "venue": "AMIA Annual Symposium Proceedings",
-      "year": 2025,
+      "title": "Wearable-Based Fair and Accurate Pain Assessment Using Multi-attribute Fairness Loss in Convolutional Neural Networks",
+      "authors": "S Sultana, Y Zhu, SH Liu, MAU Alam",
+      "venue": "International Conference on Mobile and Ubiquitous Systems: Computing …, 2024",
+      "year": 20,
       "status": "Published"
     },
     {
       "title": "Robust multi-domain descriptive text classification leveraging conventional and hybrid deep learning models",
-      "authors": "Shovan Bhowmik, Sharmin Sultana, Ahmed Arian Sajid, Saha Reno, Aakash Manjrekar",
-      "venue": "International Journal of Information Technology",
-      "year": 2024,
+      "authors": "S Bhowmik, S Sultana, AA Sajid, S Reno, A Manjrekar",
+      "venue": "International Journal of Information Technology 16 (5), 3219-3231, 2024",
+      "year": 20,
+      "status": "Published"
+    },
+    {
+      "title": "MedReadCtrl: Personalizing medical text generation with readability-controlled instruction learning",
+      "authors": "H Tran, Z Yao, WS Jang, S Sultana, A Chang, Y Zhang, H Yu",
+      "venue": "medRxiv, 2025",
+      "year": 20,
+      "status": "Published"
+    },
+    {
+      "title": "Knowing When to Abstain: Medical LLMs Under Clinical Uncertainty",
+      "authors": "S Machcha, S Yerra, S Gupta, A Sahoo, S Sultana, H Yu, Z Yao",
+      "venue": "arXiv preprint arXiv:2601.12471, 2026",
+      "year": 20,
+      "status": "Published"
+    },
+    {
+      "title": "Enhancing LLMs for Identifying and Prioritizing Important Medical Jargons from Electronic Health Record Notes Utilizing Data Augmentation",
+      "authors": "WS Jang, S Sultana, Z Yao, H Tran, Z Yang, S Kwon, H Yu",
+      "venue": "arXiv preprint arXiv:2502.16022, 2025",
+      "year": 20,
+      "status": "Published"
+    },
+    {
+      "title": "Do Large Language Models Know When Not to Answer in Medical QA?",
+      "authors": "S Machcha, S Yerra, S Sultana, H Yu, Z Yao",
+      "venue": "Proceedings of the 2nd Workshop on Uncertainty-Aware NLP (UncertaiNLP 2025 …, 2025",
+      "year": 20,
+      "status": "Published"
+    },
+    {
+      "title": "Detection of Short-Form Video Addiction with Wearable Sensors via Temporally-Coherent Domain Adaptation",
+      "authors": "M Rahman, AM Mahi, S Sultana, MM Churpek, MAU Alam",
+      "venue": "AMIA Annual Symposium Proceedings 2024, 940, 2025",
+      "year": 20,
       "status": "Published"
     },
     {
       "title": "Clusterization of different vulnerable countries for immigrants due to covid-19 using mean probabilistic likelihood score and unsupervised mining algorithms",
-      "authors": "Shovan Bhowmik, Saha Reno, Sharmin Sultana, Mamun Ahmed",
-      "venue": "ICICT4SD",
-      "year": 2021,
+      "authors": "S Bhowmik, S Reno, S Sultana, M Ahmed",
+      "venue": "2021 International Conference on Information and Communication Technology …, 2021",
+      "year": 20,
       "status": "Published"
     },
     {
-      "title": "A minimum spanning tree based routing protocol for multi-hop and multi-channel cognitive radio",
-      "authors": "Sharmin Sultana, Asaduzzaman Asaduzzaman",
-      "venue": "ICIEV and icIVPR",
-      "year": 2018,
+      "title": "Chatbot To Help Patients Understand Their Health",
+      "authors": "WS Jang, H Tran, M Mistry, SK Gandluri, Y Zhang, S Sultana, S Kwon, ...",
+      "venue": "Proceedings of the Conference on Empirical Methods in Natural Language …, 2025",
+      "year": 20,
       "status": "Published"
-    },
-    {
-      "title": "Enhancing the Extraction of Key Medical Jargon from EHR Notes for Patients: Using Data Augmentation for finetuning Large Language Models",
-      "authors": "W. S. Jang, Sharmin Sultana, Z. Yao, H. Tran, Z. Yang, H. Yu",
-      "venue": "JMIR AI",
-      "year": 2026,
-      "status": "In Review"
     },
     {
       "title": "Association between PTSD and health-related social needs in US Veterans: an NLP analysis using Veterans Health Administration Data",
-      "authors": "F. Ouyang, Sharmin Sultana, H. Yu, et al.",
-      "venue": "JAMA Psychiatry",
-      "year": 2026,
-      "status": "In Review"
+      "authors": "F Ouyang, W Hu, J Reisman, TK Pogoda, KF Carlson, W Liu, Y Moradi, ...",
+      "venue": "Journal of Affective Disorders, 120643, 2025",
+      "year": 20,
+      "status": "Published"
+    },
+    {
+      "title": "A Minimum Spanning Tree Based Routing Protocol For Multi-hop And Multi-channel Cognitive Radio",
+      "authors": "S Sultana, A Asaduzzaman",
+      "venue": "2018 Joint 7th International Conference on Informatics, Electronics &amp; Vision …, 2018",
+      "year": 20,
+      "status": "Published"
     }
   ]
 }
