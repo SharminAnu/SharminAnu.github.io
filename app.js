@@ -14,7 +14,14 @@ const createEl = (tag, className, text) => {
 const toListText = (items) =>
   items && items.length ? items.join(", ") : "";
 
-const buildPublicationItem = (publication) => {
+const highlightAuthor = (authors, name) => {
+  if (!authors || !name) return authors || "";
+  const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(`\\b${escaped}\\b`, "g");
+  return authors.replace(regex, `<span class="author-highlight">${name}</span>`);
+};
+
+const buildPublicationItem = (publication, highlightName) => {
   const container = createEl("div", "pub-item");
 
   const titleRow = createEl("div", "pub-title");
@@ -28,9 +35,12 @@ const buildPublicationItem = (publication) => {
     titleRow.textContent = publication.title || "";
   }
 
-  const authors = publication.authors
-    ? createEl("div", "pub-authors", publication.authors)
-    : null;
+  let authors = null;
+  if (publication.authors) {
+    const authorEl = createEl("div", "pub-authors");
+    authorEl.innerHTML = highlightAuthor(publication.authors, highlightName);
+    authors = authorEl;
+  }
   const venueParts = [];
   if (publication.venue) venueParts.push(publication.venue);
   if (publication.year) venueParts.push(publication.year);
@@ -139,6 +149,7 @@ const renderPublications = (scholar) => {
   publications.innerHTML = "";
 
   const publicationItems = scholar.publications || [];
+  const highlightName = scholar.authorHighlight || "S Sultana";
   const grouped = groupByYearDesc(publicationItems);
 
   grouped.forEach(([year, items]) => {
@@ -147,7 +158,7 @@ const renderPublications = (scholar) => {
     const list = createEl("ol", "list");
     items.forEach((publication) => {
       const li = createEl("li");
-      li.appendChild(buildPublicationItem(publication));
+      li.appendChild(buildPublicationItem(publication, highlightName));
       list.appendChild(li);
     });
     card.appendChild(list);

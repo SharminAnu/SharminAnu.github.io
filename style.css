@@ -200,6 +200,11 @@ main {
   font-size: 0.95rem;
 }
 
+.author-highlight {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .contact-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

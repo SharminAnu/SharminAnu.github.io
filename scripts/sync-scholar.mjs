@@ -7,16 +7,18 @@ const stripHtml = (value = "") =>
 
 const parseRow = (row) => {
   const titleMatch = row.match(/class="gsc_a_at"[^>]*>(.*?)<\/a>/);
+  const urlMatch = row.match(/class="gsc_a_at"[^>]*href="([^"]+)"/);
   const grayMatches = [...row.matchAll(/class="gs_gray"[^>]*>(.*?)<\/div>/g)];
   const authors = grayMatches[0]?.[1];
   const venue = grayMatches[1]?.[1];
-  const yearMatch = row.match(/\b(19|20)\d{2}\b/g);
+  const yearMatch = row.match(/class="gsc_a_y"[^>]*>\\s*<span[^>]*>(\\d{4})<\\/span>/);
 
   return {
     title: stripHtml(titleMatch?.[1]),
+    url: urlMatch?.[1] ? `https://scholar.google.com${urlMatch[1]}` : "",
     authors: stripHtml(authors),
     venue: stripHtml(venue),
-    year: yearMatch ? Number(yearMatch[yearMatch.length - 1]) : null,
+    year: yearMatch ? Number(yearMatch[1]) : null,
     status: "Published"
   };
 };
