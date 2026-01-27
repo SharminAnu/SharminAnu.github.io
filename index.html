@@ -1,13 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=https://uxfol.io/p/aadb5208/about" />
-    <title></title>
-</head>
-<body>
-    <p>If you are not redirected automatically, follow the <a href='https://uxfol.io/p/aadb5208/about'>link to my portfolio</a>.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sharmin Sultana | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="#top" id="site-name">Sharmin Sultana</a>
+        <div class="nav-links">
+          <a href="#cv">CV</a>
+          <a href="#academics">Academics</a>
+          <a href="#projects">Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#activities">Activities</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow" id="hero-title">PhD Student in Computer Science</p>
+          <h1 id="hero-tagline">Healthcare-focused AI research and applied NLP</h1>
+          <p class="lead" id="hero-summary"></p>
+          <div class="hero-meta" id="hero-meta"></div>
+        </div>
+      </section>
+
+      <section id="cv" class="section">
+        <div class="section-header">
+          <h2>CV</h2>
+          <p>Download or view the latest resume.</p>
+        </div>
+        <div class="card" id="cv-card"></div>
+      </section>
+
+      <section id="academics" class="section">
+        <div class="section-header">
+          <h2>Academics</h2>
+          <p>Education and academic standing</p>
+        </div>
+        <div id="academics-list"></div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>Selected applied ML and NLP work</p>
+        </div>
+        <div class="card-grid" id="projects-list"></div>
+      </section>
+
+      <section id="publications" class="section">
+        <div class="section-header">
+          <h2>Publications</h2>
+          <p>In review and published work</p>
+        </div>
+        <div id="publications-list"></div>
+      </section>
+
+      <section id="activities" class="section">
+        <div class="section-header">
+          <h2>Activities</h2>
+          <p>Research, teaching, and lab work</p>
+        </div>
+        <div id="activities-list"></div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Open to collaboration in healthcare AI and NLP.</p>
+        </div>
+        <div class="card contact-card" id="contact-card"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p id="footer-text"></p>
+    </footer>
+    <script src="app.js" defer></script>
+  </body>
 </html>
-
-

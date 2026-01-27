@@ -1,0 +1,59 @@
+{
+  "scholarProfile": {
+    "name": "Sharmin Sultana",
+    "googleScholarId": "_aQ0cT4AAAAJ",
+    "profileUrl": "https://scholar.google.com/citations?user=_aQ0cT4AAAAJ&hl=en"
+  },
+  "lastSynced": "2026-01-26",
+  "publications": [
+    {
+      "title": "Wearable-based Fair and Accurate Pain Assessment Using Multi-Attribute Fairness Loss in Convolutional Neural Networks",
+      "authors": "Sharmin Sultana, Yidong Zhu, Shao-Hsien Liu, MAU Alam",
+      "venue": "MobiQuitous 2024",
+      "year": 2025,
+      "status": "Published"
+    },
+    {
+      "title": "Detection of Short-Form Video Addiction with Wearable Sensors via Temporally-Coherent Domain Adaptation",
+      "authors": "Mahmudur Rahman, Atqiya Munawara Mahi, Sharmin Sultana, Matthew M Churpek, Mohammad Arif Ul Alam",
+      "venue": "AMIA Annual Symposium Proceedings",
+      "year": 2025,
+      "status": "Published"
+    },
+    {
+      "title": "Robust multi-domain descriptive text classification leveraging conventional and hybrid deep learning models",
+      "authors": "Shovan Bhowmik, Sharmin Sultana, Ahmed Arian Sajid, Saha Reno, Aakash Manjrekar",
+      "venue": "International Journal of Information Technology",
+      "year": 2024,
+      "status": "Published"
+    },
+    {
+      "title": "Clusterization of different vulnerable countries for immigrants due to covid-19 using mean probabilistic likelihood score and unsupervised mining algorithms",
+      "authors": "Shovan Bhowmik, Saha Reno, Sharmin Sultana, Mamun Ahmed",
+      "venue": "ICICT4SD",
+      "year": 2021,
+      "status": "Published"
+    },
+    {
+      "title": "A minimum spanning tree based routing protocol for multi-hop and multi-channel cognitive radio",
+      "authors": "Sharmin Sultana, Asaduzzaman Asaduzzaman",
+      "venue": "ICIEV and icIVPR",
+      "year": 2018,
+      "status": "Published"
+    },
+    {
+      "title": "Enhancing the Extraction of Key Medical Jargon from EHR Notes for Patients: Using Data Augmentation for finetuning Large Language Models",
+      "authors": "W. S. Jang, Sharmin Sultana, Z. Yao, H. Tran, Z. Yang, H. Yu",
+      "venue": "JMIR AI",
+      "year": 2026,
+      "status": "In Review"
+    },
+    {
+      "title": "Association between PTSD and health-related social needs in US Veterans: an NLP analysis using Veterans Health Administration Data",
+      "authors": "F. Ouyang, Sharmin Sultana, H. Yu, et al.",
+      "venue": "JAMA Psychiatry",
+      "year": 2026,
+      "status": "In Review"
+    }
+  ]
+}

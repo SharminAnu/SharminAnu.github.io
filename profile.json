@@ -1,0 +1,84 @@
+{
+  "name": "Sharmin Sultana",
+  "title": "PhD Student in Computer Science",
+  "tagline": "Healthcare-focused AI research and applied NLP",
+  "summary": "PhD student specializing in fine-tuning and deploying language models for clinical and biomedical applications. Proficient in Python, PyTorch, TensorFlow, SAS, Stata, and Microsoft SQL Server for end-to-end data analysis and model development.",
+  "location": "Lowell, MA",
+  "email": "Sharmin_Sultana@student.uml.edu",
+  "phone": "+1 267-301-2190",
+  "cv": {
+    "file": "Sharmin_Resume_Single_Column.pdf",
+    "label": "Download CV (PDF)"
+  },
+  "links": {
+    "github": "https://github.com/SharminAnu",
+    "scholar": "https://scholar.google.com/citations?user=_aQ0cT4AAAAJ&hl=en",
+    "linkedin": "https://www.linkedin.com/in/sultana-sharmin/",
+    "portfolio": ""
+  },
+  "education": [
+    {
+      "institution": "University of Massachusetts Lowell",
+      "degree": "PhD in Computer Science, expected Fall 2027",
+      "advisor": "Dr. Hong Yu",
+      "gpa": "3.74 / 4.00"
+    },
+    {
+      "institution": "Chittagong University of Engineering and Technology",
+      "degree": "BSc in Computer Science and Engineering",
+      "advisor": "Dr. Assaduzzaman",
+      "gpa": "3.69 / 4.00, Merit Position: 5th among 120"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Sentiment Analysis Using Traditional Deep Learning and BERT",
+      "description": "Compared LSTM, BiLSTM, and CNN architectures with BERT; BERT achieved 87% accuracy.",
+      "stack": ["PyTorch", "TensorFlow"]
+    },
+    {
+      "title": "Comparing ML Algorithms for Cyberbullying Sentiment Analysis",
+      "description": "Implemented and validated ML classifiers using TF-IDF features with preprocessing via Pandas and NumPy.",
+      "stack": ["Python", "Scikit-learn", "NLTK"]
+    },
+    {
+      "title": "Twitter Data Retrieval and Hashtag Analysis",
+      "description": "Extracted Twitter data, performed statistical hashtag analysis, and built a filtering system for highly used tags.",
+      "stack": ["Python", "Tweepy"]
+    },
+    {
+      "title": "News Article Extraction and Text Analysis",
+      "description": "Built a Reuters scraper and applied NLP to extract lemmas, noun phrases, and entity pairs.",
+      "stack": ["BeautifulSoup", "Textacy", "spaCy"]
+    },
+    {
+      "title": "Infant Cognitive Capacity Prediction",
+      "description": "Applied ML and causal inference methods to estimate treatment effects and predict cognitive outcomes.",
+      "stack": ["TensorFlow", "DoWhy"]
+    }
+  ],
+  "activities": [
+    {
+      "title": "Research Assistant, UMass BioNLP Lab",
+      "subtitle": "Fall 2023 - Present",
+      "bullets": [
+        "Studying SDOH impacts on MOUD initiation and opioid overdose in justice-involved U.S. veterans using ICD codes and NLP extraction from EHR notes.",
+        "Developing statistical ML and transformer pipelines for nested case-control studies across varying follow-up windows.",
+        "Fine-tuning RoBERTa, ClinicalBERT, and Llama 3.1 8B models on synthetic notes to detect employment status in VA social work notes."
+      ]
+    },
+    {
+      "title": "Research Intern, CUBICS Lab",
+      "subtitle": "Summer 2022 - Summer 2023",
+      "description": "Developed a Multi-Attribute FairLoss function for CNN-based pain status prediction that improved fairness with 84% accuracy using wearable device data."
+    },
+    {
+      "title": "Graduate Teaching Assistant, University of Massachusetts Lowell",
+      "description": "Courses: Computing I, HCI, Data Science."
+    },
+    {
+      "title": "Teaching Lecturer, Bangladesh Army International University of Science & Technology",
+      "description": "Courses: Object Oriented Programming, Machine Learning."
+    }
+  ]
+}
