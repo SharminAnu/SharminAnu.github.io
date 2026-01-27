@@ -175,6 +175,33 @@ main {
   gap: 12px;
 }
 
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.icon-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.icon-text {
+  white-space: nowrap;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 24px;

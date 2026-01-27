@@ -43,27 +43,10 @@ const renderHero = (profile) => {
   const title = document.getElementById("hero-title");
   const tagline = document.getElementById("hero-tagline");
   const summary = document.getElementById("hero-summary");
-  const meta = document.getElementById("hero-meta");
-
   if (siteName) siteName.textContent = textOrFallback(profile.name, "Portfolio");
   if (title) title.textContent = textOrFallback(profile.title);
   if (tagline) tagline.textContent = textOrFallback(profile.tagline);
   if (summary) summary.textContent = textOrFallback(profile.summary);
-
-  if (meta) {
-    meta.innerHTML = "";
-    const metaItems = [
-      profile.location,
-      profile.email,
-      profile.phone
-    ].filter(Boolean);
-
-    metaItems.forEach((item) => {
-      const span = document.createElement("span");
-      span.textContent = item;
-      meta.appendChild(span);
-    });
-  }
 };
 
 const renderCv = (profile) => {
@@ -107,8 +90,6 @@ const renderAcademics = (profile) => {
     const card = createEl("div", "card");
     card.appendChild(createEl("h3", "", entry.institution));
     card.appendChild(createEl("p", "card-subtitle", entry.degree));
-    if (entry.advisor) card.appendChild(createEl("p", "", `Advisor: ${entry.advisor}`));
-    if (entry.gpa) card.appendChild(createEl("p", "", `GPA: ${entry.gpa}`));
     academics.appendChild(card);
   });
 };
@@ -149,28 +130,28 @@ const renderPublications = (scholar) => {
   });
 };
 
-const renderActivities = (profile) => {
-  const activities = document.getElementById("activities-list");
-  if (!activities) return;
-  activities.innerHTML = "";
+const renderExperience = (profile) => {
+  const experience = document.getElementById("experience-list");
+  if (!experience) return;
+  experience.innerHTML = "";
 
-  profile.activities?.forEach((activity) => {
+  profile.experience?.forEach((item) => {
     const card = createEl("div", "card");
-    card.appendChild(createEl("h3", "", activity.title));
-    if (activity.subtitle) {
-      card.appendChild(createEl("p", "card-subtitle", activity.subtitle));
+    card.appendChild(createEl("h3", "", item.title));
+    if (item.subtitle) {
+      card.appendChild(createEl("p", "card-subtitle", item.subtitle));
     }
-    if (activity.description) {
-      card.appendChild(createEl("p", "", activity.description));
+    if (item.description) {
+      card.appendChild(createEl("p", "", item.description));
     }
-    if (activity.bullets?.length) {
+    if (item.bullets?.length) {
       const list = createEl("ul", "list");
-      activity.bullets.forEach((bullet) => {
+      item.bullets.forEach((bullet) => {
         list.appendChild(createEl("li", "", bullet));
       });
       card.appendChild(list);
     }
-    activities.appendChild(card);
+    experience.appendChild(card);
   });
 };
 
@@ -211,16 +192,49 @@ const renderContact = (profile) => {
   linkContainer.appendChild(createEl("p", "meta-label", "Links"));
   const inline = createEl("div", "inline-links");
   const linkDefs = [
-    { label: "GitHub", url: links.github },
-    { label: "Google Scholar", url: links.scholar },
-    { label: "LinkedIn", url: links.linkedin },
-    { label: "Portfolio", url: links.portfolio }
+    { label: "GitHub", url: links.github, icon: "code" },
+    { label: "Google Scholar", url: links.scholar, icon: "book" },
+    { label: "LinkedIn", url: links.linkedin, icon: "in" },
+    { label: "Portfolio", url: links.portfolio, icon: "link" }
   ];
 
-  linkDefs.forEach(({ label, url }) => {
-    const link = createEl("a", "", label);
+  const iconSvg = (type) => {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("aria-hidden", "true");
+    svg.classList.add("icon");
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    if (type === "code") {
+      path.setAttribute(
+        "d",
+        "M9 18l-6-6 6-6 1.4 1.4L5.8 12l4.6 4.6L9 18zm6 0l-1.4-1.4L18.2 12l-4.6-4.6L15 6l6 6-6 6z"
+      );
+    } else if (type === "book") {
+      path.setAttribute(
+        "d",
+        "M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v12h12V6H6z"
+      );
+    } else if (type === "in") {
+      path.setAttribute(
+        "d",
+        "M6 9h3v9H6V9zm1.5-5a1.75 1.75 0 110 3.5A1.75 1.75 0 017.5 4zM11 9h3v1.3h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V18h-3v-4.1c0-1-.02-2.3-1.4-2.3-1.4 0-1.6 1.1-1.6 2.2V18h-3V9z"
+      );
+    } else {
+      path.setAttribute(
+        "d",
+        "M10 7a1 1 0 011-1h2a4 4 0 010 8h-1v-2h1a2 2 0 000-4h-2a1 1 0 01-1-1zm-1 2v2H8a2 2 0 000 4h2a1 1 0 010 2H8a4 4 0 010-8h1z"
+      );
+    }
+    svg.appendChild(path);
+    return svg;
+  };
+
+  linkDefs.forEach(({ label, url, icon }) => {
+    const link = createEl("a", "icon-link");
     link.href = url || "#";
-    link.setAttribute("aria-label", `${label} profile`);
+    link.setAttribute("aria-label", `${label} link`);
+    link.appendChild(iconSvg(icon));
+    link.appendChild(createEl("span", "icon-text", label));
     inline.appendChild(link);
   });
 
@@ -250,7 +264,7 @@ const init = async () => {
     renderAcademics(profile);
     renderProjects(profile);
     renderPublications(scholar);
-    renderActivities(profile);
+    renderExperience(profile);
     renderContact(profile);
     renderFooter(profile, scholar);
   } catch (error) {

@@ -2,7 +2,7 @@
   "name": "Sharmin Sultana",
   "title": "PhD Student in Computer Science",
   "tagline": "Healthcare-focused AI research and applied NLP",
-  "summary": "PhD student specializing in fine-tuning and deploying language models for clinical and biomedical applications. Proficient in Python, PyTorch, TensorFlow, SAS, Stata, and Microsoft SQL Server for end-to-end data analysis and model development.",
+  "summary": "I am a PhD student in Computer Science at the University of Massachusetts Lowell, specializing in healthcare-focused artificial intelligence and natural language processing. My research focuses on developing, fine-tuning, and deploying machine learning, transformer-based models, and large language models for analyzing clinical and biomedical data, particularly electronic health records (EHRs) and social determinants of health. Currently, I work as a Research Assistant in the UMass BioNLP Lab under Prof. Hong Yu, where my work explores opioid use disorder, overdose risk, and medication initiation among justice-involved U.S. veterans.",
   "location": "Lowell, MA",
   "email": "Sharmin_Sultana@student.uml.edu",
   "phone": "+1 267-301-2190",
@@ -11,23 +11,19 @@
     "label": "Download CV (PDF)"
   },
   "links": {
-    "github": "https://github.com/SharminAnu",
-    "scholar": "https://scholar.google.com/citations?user=_aQ0cT4AAAAJ&hl=en",
-    "linkedin": "https://www.linkedin.com/in/sultana-sharmin/",
+    "github": "",
+    "scholar": "",
+    "linkedin": "",
     "portfolio": ""
   },
   "education": [
     {
       "institution": "University of Massachusetts Lowell",
-      "degree": "PhD in Computer Science, expected Fall 2027",
-      "advisor": "Dr. Hong Yu",
-      "gpa": "3.74 / 4.00"
+      "degree": "PhD in Computer Science, expected Fall 2027"
     },
     {
       "institution": "Chittagong University of Engineering and Technology",
-      "degree": "BSc in Computer Science and Engineering",
-      "advisor": "Dr. Assaduzzaman",
-      "gpa": "3.69 / 4.00, Merit Position: 5th among 120"
+      "degree": "BSc in Computer Science and Engineering"
     }
   ],
   "projects": [
@@ -57,7 +53,7 @@
       "stack": ["TensorFlow", "DoWhy"]
     }
   ],
-  "activities": [
+  "experience": [
     {
       "title": "Research Assistant, UMass BioNLP Lab",
       "subtitle": "Fall 2023 - Present",
