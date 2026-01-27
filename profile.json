@@ -1,5 +1,6 @@
 {
   "name": "Sharmin Sultana",
+  "navLabel": "Home",
   "title": "PhD Student in Computer Science",
   "tagline": "Healthcare-focused AI research and applied NLP",
   "summary": "I am a PhD student in Computer Science at the University of Massachusetts Lowell, specializing in healthcare-focused artificial intelligence and natural language processing. My research focuses on developing, fine-tuning, and deploying machine learning, transformer-based models, and large language models for analyzing clinical and biomedical data, particularly electronic health records (EHRs) and social determinants of health. Currently, I work as a Research Assistant in the UMass BioNLP Lab under Prof. Hong Yu, where my work explores opioid use disorder, overdose risk, and medication initiation among justice-involved U.S. veterans.",

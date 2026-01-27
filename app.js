@@ -14,13 +14,35 @@ const createEl = (tag, className, text) => {
 const toListText = (items) =>
   items && items.length ? items.join(", ") : "";
 
-const formatPublication = (publication) => {
-  const parts = [];
-  if (publication.title) parts.push(publication.title);
-  if (publication.authors) parts.push(publication.authors);
-  if (publication.venue) parts.push(publication.venue);
-  if (publication.status) parts.push(`(${publication.status})`);
-  return parts.join(". ");
+const buildPublicationItem = (publication) => {
+  const container = createEl("div", "pub-item");
+
+  const titleRow = createEl("div", "pub-title");
+  if (publication.url) {
+    const link = createEl("a", "pub-link", publication.title);
+    link.href = publication.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    titleRow.appendChild(link);
+  } else {
+    titleRow.textContent = publication.title || "";
+  }
+
+  const authors = publication.authors
+    ? createEl("div", "pub-authors", publication.authors)
+    : null;
+  const venueParts = [];
+  if (publication.venue) venueParts.push(publication.venue);
+  if (publication.year) venueParts.push(publication.year);
+  const venue = venueParts.length
+    ? createEl("div", "pub-venue", venueParts.join(" · "))
+    : null;
+
+  container.appendChild(titleRow);
+  if (authors) container.appendChild(authors);
+  if (venue) container.appendChild(venue);
+
+  return container;
 };
 
 const groupByYearDesc = (items) => {
@@ -43,7 +65,9 @@ const renderHero = (profile) => {
   const title = document.getElementById("hero-title");
   const tagline = document.getElementById("hero-tagline");
   const summary = document.getElementById("hero-summary");
-  if (siteName) siteName.textContent = textOrFallback(profile.name, "Portfolio");
+  if (siteName) {
+    siteName.textContent = textOrFallback(profile.navLabel, "Home");
+  }
   if (title) title.textContent = textOrFallback(profile.title);
   if (tagline) tagline.textContent = textOrFallback(profile.tagline);
   if (summary) summary.textContent = textOrFallback(profile.summary);
@@ -122,7 +146,8 @@ const renderPublications = (scholar) => {
     card.appendChild(createEl("h3", "", String(year)));
     const list = createEl("ol", "list");
     items.forEach((publication) => {
-      const li = createEl("li", "", formatPublication(publication));
+      const li = createEl("li");
+      li.appendChild(buildPublicationItem(publication));
       list.appendChild(li);
     });
     card.appendChild(list);
@@ -250,6 +275,56 @@ const renderFooter = (profile, scholar) => {
   footer.textContent = `Built for ${profile.name || "your profile"}. ${synced} ${year}.`;
 };
 
+const setupSectionNavigation = () => {
+  const sections = Array.from(document.querySelectorAll(".page-section"));
+  const navLinks = Array.from(document.querySelectorAll(".nav-links a, .logo"));
+
+  const setActive = (targetId) => {
+    sections.forEach((section) => {
+      const isTarget = section.id === targetId;
+      if (isTarget) {
+        section.classList.remove("is-hidden");
+        section.classList.remove("is-active");
+        requestAnimationFrame(() => {
+          section.classList.add("is-active");
+        });
+      } else {
+        section.classList.remove("is-active");
+        section.classList.add("is-hidden");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      const href = link.getAttribute("href") || "";
+      const linkId = href.startsWith("#") ? href.slice(1) : "";
+      link.classList.toggle("active", linkId === targetId);
+    });
+  };
+
+  const navigate = (id) => {
+    const targetId = sections.some((section) => section.id === id)
+      ? id
+      : "home";
+    setActive(targetId);
+  };
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href") || "";
+      if (!href.startsWith("#")) return;
+      event.preventDefault();
+      const targetId = href.slice(1);
+      history.replaceState(null, "", href);
+      navigate(targetId);
+    });
+  });
+
+  const initialTarget = window.location.hash
+    ? window.location.hash.slice(1)
+    : "home";
+  navigate(initialTarget);
+};
+
 const init = async () => {
   try {
     const [profileRes, scholarRes] = await Promise.all([
@@ -260,13 +335,13 @@ const init = async () => {
     const scholar = await scholarRes.json();
 
     renderHero(profile);
-    renderCv(profile);
     renderAcademics(profile);
     renderProjects(profile);
     renderPublications(scholar);
     renderExperience(profile);
     renderContact(profile);
     renderFooter(profile, scholar);
+    setupSectionNavigation();
   } catch (error) {
     console.error("Failed to load profile data:", error);
   }
