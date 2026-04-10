@@ -2,8 +2,9 @@
   "name": "Sharmin Sultana",
   "navLabel": "Home",
   "title": "PhD Student in Computer Science",
-  "tagline": "Healthcare-focused AI research and applied NLP",
-  "summary": "I am a PhD student in Computer Science at the University of Massachusetts Lowell, specializing in healthcare-focused artificial intelligence and natural language processing. My research focuses on developing, fine-tuning, and deploying machine learning, transformer-based models, and large language models for analyzing clinical and biomedical data, particularly electronic health records (EHRs) and social determinants of health. Currently, I work as a Research Assistant in the UMass BioNLP Lab under Prof. Hong Yu, where my work explores opioid use disorder, overdose risk, and medication initiation among justice-involved U.S. veterans.",
+  "tagline": "I am a PhD student in Computer Science at the University of Massachusetts Lowell, developing healthcare-focused AI systems with an emphasis on clinical NLP and trustworthy models for electronic health records.",
+  "summary": "I specialize in healthcare-focused artificial intelligence and natural language processing. My research centers on developing, fine-tuning, and deploying machine learning, transformer-based models, and large language models for analyzing clinical and biomedical data, particularly EHRs and social determinants of health. I work as a Research Assistant in the UMass BioNLP Lab under Prof. Hong Yu on opioid use disorder, overdose risk, and medication initiation among justice-involved U.S. veterans.",
+  "aboutExtra": "Prior to my doctoral studies, I contributed to fair machine learning for health sensing and taught at the undergraduate level in Bangladesh. I am motivated by rigorous methods that improve patient-centered care and health equity.",
   "location": "Lowell, MA",
   "email": "Sharmin_Sultana@student.uml.edu",
   "phone": "+1 267-301-2190",
@@ -13,18 +14,61 @@
   },
   "links": {
     "github": "",
-    "scholar": "",
+    "scholar": "https://scholar.google.com/citations?user=_aQ0cT4AAAAJ&hl=en",
     "linkedin": "",
     "portfolio": ""
   },
+  "researchInterests": [
+    "Clinical and biomedical natural language processing",
+    "Healthcare AI and electronic health records (EHRs)",
+    "Trustworthy medical LLMs and uncertainty-aware systems",
+    "Fairness and robustness in health-related machine learning"
+  ],
+  "news": [
+    {
+      "date": "01/2026",
+      "text": "New preprint: “Knowing When to Abstain: Medical LLMs Under Clinical Uncertainty” (arXiv:2601.12471)."
+    },
+    {
+      "date": "2025",
+      "text": "Work on medical text generation, medical jargon identification, and health chatbots appeared in medRxiv, EMNLP workshops, and related venues—see Publications."
+    }
+  ],
   "education": [
     {
       "institution": "University of Massachusetts Lowell",
-      "degree": "PhD in Computer Science, expected Fall 2027"
+      "degree": "PhD in Computer Science (expected Fall 2027)",
+      "details": ["Advisor: Prof. Hong Yu", "Research: UMass BioNLP Lab"]
     },
     {
-      "institution": "Chittagong University of Engineering and Technology",
+      "institution": "Chittagong University of Engineering and Technology (CUET), Bangladesh",
       "degree": "BSc in Computer Science and Engineering"
+    }
+  ],
+  "research": [
+    {
+      "title": "Research Assistant, UMass BioNLP Lab",
+      "subtitle": "Fall 2023 – Present",
+      "bullets": [
+        "Studying SDOH impacts on MOUD initiation and opioid overdose in justice-involved U.S. veterans using ICD codes and NLP extraction from EHR notes.",
+        "Developing statistical ML and transformer pipelines for nested case-control studies across varying follow-up windows.",
+        "Fine-tuning RoBERTa, ClinicalBERT, and Llama 3.1 8B on synthetic notes to detect employment status in VA social work notes."
+      ]
+    },
+    {
+      "title": "Research Intern, CUBICS Lab",
+      "subtitle": "Summer 2022 – Summer 2023",
+      "description": "Developed a Multi-Attribute FairLoss function for CNN-based pain status prediction that improved fairness with 84% accuracy using wearable device data."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Graduate Teaching Assistant, University of Massachusetts Lowell",
+      "description": "Courses: Computing I, HCI, Data Science."
+    },
+    {
+      "title": "Teaching Lecturer, Bangladesh Army International University of Science & Technology",
+      "description": "Courses: Object Oriented Programming, Machine Learning."
     }
   ],
   "projects": [
@@ -54,28 +98,18 @@
       "stack": ["TensorFlow", "DoWhy"]
     }
   ],
-  "experience": [
-    {
-      "title": "Research Assistant, UMass BioNLP Lab",
-      "subtitle": "Fall 2023 - Present",
-      "bullets": [
-        "Studying SDOH impacts on MOUD initiation and opioid overdose in justice-involved U.S. veterans using ICD codes and NLP extraction from EHR notes.",
-        "Developing statistical ML and transformer pipelines for nested case-control studies across varying follow-up windows.",
-        "Fine-tuning RoBERTa, ClinicalBERT, and Llama 3.1 8B models on synthetic notes to detect employment status in VA social work notes."
-      ]
-    },
-    {
-      "title": "Research Intern, CUBICS Lab",
-      "subtitle": "Summer 2022 - Summer 2023",
-      "description": "Developed a Multi-Attribute FairLoss function for CNN-based pain status prediction that improved fairness with 84% accuracy using wearable device data."
-    },
-    {
-      "title": "Graduate Teaching Assistant, University of Massachusetts Lowell",
-      "description": "Courses: Computing I, HCI, Data Science."
-    },
-    {
-      "title": "Teaching Lecturer, Bangladesh Army International University of Science & Technology",
-      "description": "Courses: Object Oriented Programming, Machine Learning."
-    }
+  "interests": [
+    "Natural Language Processing",
+    "Clinical NLP",
+    "Deep Learning",
+    "Machine Learning",
+    "Healthcare AI",
+    "Fairness in ML",
+    "Data Science"
+  ],
+  "skills": [
+    "Programming: Python, SQL, C/C++, Java, HTML/CSS, JavaScript",
+    "ML & NLP: PyTorch, TensorFlow, Scikit-learn, Hugging Face, spaCy, NLTK",
+    "Focus areas: EHR analysis, transformer and LLM fine-tuning, nested case-control and clinical study support"
   ]
 }
